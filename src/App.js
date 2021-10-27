@@ -92,7 +92,8 @@ function App() {
   return (
     <div className="App">
       <h1>OpenSea Polygon NFT transfer</h1>
-      {!window.ethereum && <h2>Please install MetaMask.</h2>}
+      {!window.ethereum && <h2>Install MetaMask wallet.</h2>}
+      {!myAddress && <h2 class="red">First allow connection to your MetaMask.</h2>}
       <img src="address.png" height="250" />
       <div>
         <h3>Contract Version</h3>
