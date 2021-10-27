@@ -53,7 +53,12 @@ function App() {
   }
 
   const submit = async () => {
-    if (!myAddress || !contractAddress.trim().length || !address.trim().length) {
+    if (!myAddress) {
+      alert("MetaMask wallet has to be connected to create and send this transaction.")
+      return;
+    }
+
+    if (!contractAddress.trim().length || !address.trim().length) {
       alert("All fields are mandatory.")
       return;
     }
